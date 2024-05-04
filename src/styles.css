@@ -1,0 +1,56 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 250px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  width: 250px;
+  margin: 10px 0px;
+}
+
+.card:hover {
+  background: #e2e0e0;
+  border-color: white;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  background-color: #2e7cf6;
+  color: white;
+  width: 100%;
+  display: block;
+  padding: 5px;
+  margin: 0px;
+  text-align: center;
+}
+
+.pokemonImage {
+  object-fit: cover;
+}
+
+.pokemonInfo {
+  width: 120px;
+  margin: auto;
+}
