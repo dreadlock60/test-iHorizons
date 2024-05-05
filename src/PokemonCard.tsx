@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-export const PokemonCard = ({ name }: { name: PokemonName }) => {
-  const navigate = useNavigate()
+export const PokemonCard = ({ name, navigate }: { name: PokemonName, navigate: any }) => {
+
 
   const { data, error, isLoading, isFetching, refetch } =
     useGetPokemonByNameQuery(name)
