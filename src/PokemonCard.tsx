@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { useGetPokemonByNameQuery } from './services/pokemon'
 import type { PokemonName } from './pokemon.data'
 import { useNavigate } from 'react-router-dom'
+import { useGetPokemonByNameQuery } from './services/reduxHooks'
 
 
 
@@ -28,7 +28,7 @@ export const PokemonCard = ({ name, navigate }: { name: PokemonName, navigate: a
         <>Loading...</>
       ) : data ? (
         <>
-          <h3>{data.species.name}</h3>
+          <h3>{name}</h3>
           <div style={{ minWidth: 96, minHeight: 96 }}>
             <img
               src={data.sprites.front_shiny}

@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { useGetPokemonByIdQuery } from './services/pokemon'
 import type { PokemonName } from './pokemon.data'
 import { useNavigate, useParams } from 'react-router-dom';
+import { useGetPokemonByIdQuery } from './services/reduxHooks';
 
 
 
@@ -39,7 +39,7 @@ export const Pokemon = () => {
             <div className='row'><b>weight : </b> {data.weight} kg</div>
 
             <div className='row'><b>type : </b>
-              <div>{data.types.map((type: any) => <span>{type.type.name} <br /></span>)}</div></div>
+              <div>{data.types.map((type: any, key: number) => <span key={key}>{type.type.name} <br /></span>)}</div></div>
 
           </div></>
       ) : (

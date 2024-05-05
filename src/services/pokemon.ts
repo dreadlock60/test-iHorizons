@@ -38,5 +38,3 @@ export const pokemonApi = createApi({
   }),
 })
 
-// Export hooks for usage in functional components
-export const { useGetPokemonByNameQuery, useGetPokemonsQuery, useGetPokemonByIdQuery } = pokemonApi

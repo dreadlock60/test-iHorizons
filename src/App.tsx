@@ -2,7 +2,7 @@ import * as React from 'react'
 import { PokemonCard } from './PokemonCard'
 import { PokemonName, POKEMON_NAMES } from './pokemon.data'
 import './styles.css'
-import { useGetPokemonsQuery } from './services/pokemon'
+import { useGetPokemonsQuery } from './services/reduxHooks'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -10,9 +10,7 @@ export default function App() {
   const navigate = useNavigate()
   const { data, error, isLoading, isFetching, refetch } =
     useGetPokemonsQuery({})
-  React.useEffect(() => {
-    console.log(data)
-  }, [data])
+
   return (
     <div className="App">
 
